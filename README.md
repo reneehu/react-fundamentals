@@ -9,3 +9,5 @@ React Fundamentals Video Project
 Every video is coincided with a branch. If you want to compare your code with mine or you just want to play around with the code, check out the different branches on this repository.
 
 [Tyler McGinnis](https://twitter.com/tylermcginnis33)
+
+To start wev server: npm run start
