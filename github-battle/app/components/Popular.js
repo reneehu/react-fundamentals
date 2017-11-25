@@ -87,23 +87,23 @@ class Popular extends React.Component {
         }
       });
     }.bind(this));
-  }
+}
 
-  render() {
-    return (
-      <div>
-      <SelectLanguage 
-      selectedLanguage = {this.state.selectedLanguage}
-      onSelect = {this.updateLanguage}
-      />
-      {
-        !this.state.repos? 
-        (<p> hold on it's loading</p>)
-        : <RepoGrid repos={this.state.repos} />
-      }
-      </div>
-      )
-  }
+render() {
+  return (
+    <div>
+    <SelectLanguage 
+    selectedLanguage = {this.state.selectedLanguage}
+    onSelect = {this.updateLanguage}
+    />
+    {
+      !this.state.repos? 
+      (<p> hold on it's loading</p>)
+      : <RepoGrid repos={this.state.repos} />
+    }
+    </div>
+    )
+}
 }
 
 module.exports = Popular;
