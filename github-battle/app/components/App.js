@@ -6,6 +6,7 @@ var Popular = require('./Popular');
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
+var Switch = ReactRouter.Switch;
 
 
 class App extends React.Component {
@@ -14,9 +15,14 @@ class App extends React.Component {
 			<Router>
 				<div className='container'>
 					<Nav />
-					<Route path='/' exact component={Home} />
-					<Route path='/popular' component={Popular} />
-					<Route path='/Battle' component={Battle} />
+					<Switch>
+						<Route path='/' exact component={Home} />
+						<Route path='/popular' component={Popular} />
+						<Route path='/Battle' component={Battle} />
+						<Route render={function () {
+							return <p>Not Found</p>
+						}} />
+					</Switch>
 				</div>
 			</Router>
 		)
