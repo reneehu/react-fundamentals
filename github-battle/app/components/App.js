@@ -17,10 +17,10 @@ class App extends React.Component {
 					<Nav />
 					<Switch>
 						<Route path='/' exact component={Home} />
-						<Route path='/popular' component={Popular} />
-						<Route path='/Battle' component={Battle} />
+						<Route path='/popular' exact component={Popular} />
+						<Route path='/Battle' exacct component={Battle} />
 						<Route render={function () {
-							return <p>Not Found</p>
+							return <p>404 hehe</p>
 						}} />
 					</Switch>
 				</div>
