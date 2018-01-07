@@ -3,16 +3,15 @@ var React = require('react');
 var PropTypes = require('prop-types');
 
 class PlayerInput extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			username: ''
-		};
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: ''
+    };
 
-		this.updateLanguage = this.handleChange.bind(this);
-		this.updateLanguage = this.handleSubmit.bind(this);
-	}
-
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
   handleChange(event) {
     var value = event.target.value;
 
@@ -22,7 +21,6 @@ class PlayerInput extends React.Component {
       }
     });
   }
-
   handleSubmit(event) {
     event.preventDefault();
 
@@ -32,25 +30,26 @@ class PlayerInput extends React.Component {
     );
   }
 	render () {
-		return (
-			<form className='column' onSubmit={this.handleSubmit}>
-			<label className='header' htmlFor='username'>{this.props.label}</label>
-			<input
-			id='username'
-			placeholder='github username'
-			type='text'
-			value={this.state.username}
-			autoComplete='off'
-			onChange={this.handleChange}
-			/>
-			<button
-			className='button'
-			type='submit'
-			disabled={!this.state.username}>
-			Submit
-			</button>
-			</form>
-			) 
+		console.log(this.state);
+    return (
+      <form className='column' onSubmit={this.handleSubmit}>
+        <label className='header' htmlFor='username'>{this.props.label}</label>
+        <input
+          id='username'
+          placeholder='github username'
+          type='text'
+          value={this.state.username}
+          autoComplete='off'
+          onChange={this.handleChange}
+        />
+        <button
+          className='button'
+          type='submit'
+          disabled={!this.state.username}>
+            Submit
+        </button>
+      </form>
+    ) 
 	}
 }
 
@@ -73,13 +72,13 @@ class Battle extends React.Component {
 			playerOneImage: null,
 			playerTwoImage: null
 		};
-		this.updateLanguage = this.handleSubmit.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleSubmit(id, username) {
-		this.setState(function() {
+		this.setState(function () {
 			var newState = {};
-			newState[id + 'name'] = username;
+			newState[id + 'Name'] = username;
 			newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
 			return newState;
 		});
@@ -89,18 +88,19 @@ class Battle extends React.Component {
 		return (
 			<div>
 			<div className='row'>
-			{!playerOneName && 
+			{!playerOneName &&
 				<PlayerInput
 				id='playerOne'
 				label='Player One'
 				onSubmit={this.handleSubmit}
 				/>}
-				{!playerTwoName && 
-					<PlayerInput
-					id='playerTwo'
-					label='Player Two'
-					onSubmit={this.handleSubmit}
-					/>}
+
+          {!playerTwoName &&
+            <PlayerInput
+              id='playerTwo'
+              label='Player Two'
+              onSubmit={this.handleSubmit}
+            />}
 					</div>
 					</div>
 					)
