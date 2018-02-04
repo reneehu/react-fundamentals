@@ -2,6 +2,7 @@ var React = require('react');
 var Nav = require('./Nav');
 var Home = require('./Home');
 var Battle = require('./Battle');
+var Results = require('./Results');
 var Popular = require('./Popular');
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
@@ -19,6 +20,7 @@ class App extends React.Component {
 						<Route path='/' exact component={Home} />
 						<Route path='/popular' exact component={Popular} />
 						<Route path='/Battle' exacct component={Battle} />
+						<Route path='/Battle/Results' exacct component={Results} />
 						<Route render={function () {
 							return <p>404 hehe</p>
 						}} />
