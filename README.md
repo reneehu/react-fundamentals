@@ -3,7 +3,7 @@
 React Fundamentals Video Project
 ========
 
-#### This is the repository for the project we'll build together during React Trainings "React Fundamentals" course, for more information on the course see [reacttraining.com/online](https://reacttraining.com/online)
+#### This is the repository for the project we'll build together during React Trainings "React Fundamentals" course, for more information on the course see [https://tylermcginnis.com/courses/](https://tylermcginnis.com/courses/)
 
 ## Notes
 Every video is coincided with a branch. If you want to compare your code with mine or you just want to play around with the code, check out the different branches on this repository.
