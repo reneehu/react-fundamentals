@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "prettier": "find app -name '*.js' | xargs -I{} ./node_modules/.bin/prettier --write --single-quote {}",
+    "build": "NODE_ENV='production' webpack -p",
+    "firebase-init": "firebase login && firebase init",
+    "deploy": "npm run build && firebase deploy"
   },
   "babel": {
     "presets": [
@@ -21,6 +25,8 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.1",
     "html-webpack-plugin": "^2.28.0",
+    "prettier": "1.11.1",
+    "prettier-eslint": "^8.8.1",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
