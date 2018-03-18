@@ -19,8 +19,8 @@ class App extends React.Component {
 					<Switch>
 						<Route path='/' exact component={Home} />
 						<Route path='/popular' exact component={Popular} />
-						<Route path='/Battle' exacct component={Battle} />
-						<Route path='/Battle/Results' exacct component={Results} />
+						<Route path='/Battle' component={Battle} />
+						<Route path='/Results' component={Results} />
 						<Route render={function () {
 							return <p>404 hehe</p>
 						}} />

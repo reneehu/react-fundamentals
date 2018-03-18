@@ -6,7 +6,7 @@ class home extends React.Component {
 		return (
 			<div className='home-container'>
 				<h1>Github Battle: Battle your friends... and stuff.</h1>
-				<Link className='button' to='/'>Battle</Link>
+				<Link className='button' to='/Battle'>Battle</Link>
 			</div>
 			)
 	}

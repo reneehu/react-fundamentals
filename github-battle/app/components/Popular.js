@@ -1,6 +1,7 @@
 var React = require('react');
 var PropsTypes = require('prop-types');
 var api = require('../utils/api');
+var Loading = require('./Loading');
 
 function SelectLanguage(props) {
   var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
@@ -98,7 +99,7 @@ render() {
     />
     {
       !this.state.repos? 
-      (<p> hold on it's loading</p>)
+      <Loading speed={250} />
       : <RepoGrid repos={this.state.repos} />
     }
     </div>
